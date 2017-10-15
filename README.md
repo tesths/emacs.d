@@ -4,6 +4,8 @@ My Emacs config for rails develop
 
 ## Introduction
 
+My init-packages.el init-custom.el is in lisp folder. And lisp folder is on the same folder with init.el.
+
 Add
 ```
 alias emacs="emacs -nw"
