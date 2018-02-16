@@ -5,8 +5,14 @@
 
 (load-theme 'dracula t)
 
+;; undo-tree
+(global-undo-tree-mode)
+
 ;; resize-window
 (global-set-key (kbd "C-c ;") 'resize-window)
+
+;; rube
+(add-hook 'ruby-mode-hook 'robe-mode)
 
 ;; company
 (add-hook 'after-init-hook 'global-company-mode)
@@ -16,9 +22,14 @@
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
+(setq company-transformers '(company-sort-by-occurrence))
+(eval-after-load 'company
+    '(push 'company-robe company-backends))
 
-;; rube
-(add-hook 'ruby-mode-hook 'robe-mode)
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+
 
 ;; hungry-delete
 (require 'hungry-delete)

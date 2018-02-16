@@ -10,7 +10,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (enh-ruby-mode resize-window projectile-rails popwin web-mode robe smartparens counsel swiper hungry-delete company dracula-theme))))
+    (yasnippet undo-tree enh-ruby-mode resize-window projectile-rails popwin web-mode robe smartparens counsel swiper hungry-delete company dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
